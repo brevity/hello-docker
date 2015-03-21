@@ -7,7 +7,7 @@
   vars: 
   tasks: 
     - 
-      local_action: "ec2 instance_type=t2.micro vpc_subnet_id=subnet-5b80e02c image=ami-debb97b6 region=us-east-1 group=default count=1 wait=true assign_public_ip=true"
+      local_action: "ec2 instance_type=t1.micro vpc_subnet_id=subnet-5b80e02c image=ami-668da10e region=us-east-1 group=default count=1 wait=true assign_public_ip=true"
       name: "Launch instance"
       register: ec2
     - 
