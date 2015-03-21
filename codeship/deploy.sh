@@ -1,7 +1,7 @@
 git clone git@bitbucket.org:ajtoelle/hello-docker-creds.git
-`pwd`
-`ll .`
-`ll ..`
+pwd
+ls .
+ls ..
 source /home/rof/clone/hello-docker-creds/aws_credentials
 cd ansible
 pip install boto
