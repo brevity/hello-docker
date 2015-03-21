@@ -6,7 +6,9 @@ ls /home/rof/clone
 echo '---------------------------------------'
 ls /home/rof/clone/hello-docker-creds
 echo '---------------------------------------'
-source /home/rof/clone/hello-docker/hello-docker-creds/aws_credentials
+which source
+echo '---------------------------------------'
+`source /home/rof/clone/hello-docker/hello-docker-creds/aws_credentials`
 cd ansible
 pip install boto
 pip install ansible
