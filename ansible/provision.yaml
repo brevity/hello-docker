@@ -10,11 +10,10 @@
       instance_type: t2.micro
       image: ami-123456
       wait: yes
-      count: 1
 
   tasks: # here we begin the tasks section of the playbook, which is fairly self explanatory :)
     - name: Launch instance # name our tasks
-      local_action: ec2 instance_type=$instance_type image=$image count=$count wait=true assign_public_ip=true
+      local_action: ec2 instance_type=$instance_type image=$image count=1 wait=true assign_public_ip=true
       register: ec2 # register (save) the output for later use
     - name: Itemised host group addition
       local_action: add_host hostname=${item.public_ip} groupname=launched # here we add the public_ip var from the list of ec2.instances to a host group called "launched", ready for the next play
