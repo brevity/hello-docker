@@ -5,5 +5,4 @@ pip install boto
 pip install ansible
 which python
 echo 'Maybe check if an EC2 instance exists first?'
-env | grep AWS
 ansible-playbook -i hosts provision.yaml
