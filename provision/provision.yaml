@@ -1,7 +1,0 @@
-- ec2:
-    key_name: mykey
-    instance_type: t2.micro
-    image: ami-123456
-    wait: yes
-    count: 1
-    assign_public_ip: yes
