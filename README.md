@@ -1,2 +1,2 @@
 # hello-docker
-An exercise incontinuous deployment
+An exercise in continuous deployment
