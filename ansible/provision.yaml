@@ -1,16 +1,16 @@
---- 
-- 
+---
+-
   connection: local
   gather_facts: false
   hosts: local
   name: "Stage instance"
-  vars: 
-  tasks: 
-    - 
+  vars:
+  tasks:
+    -
       local_action: "ec2 instance_type=t2.micro vpc_subnet_id=subnet-5b80e02c image=ami-668da10e region=us-east-1 group=default count=1 wait=true assign_public_ip=true"
       name: "Launch instance"
       register: ec2
-    - 
+    -
       local_action: "add_host hostname=${item.public_ip} groupname=launched"
       name: "Itemised host group addition"
       with_items: "${ec2.instances}"
