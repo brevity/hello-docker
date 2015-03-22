@@ -13,5 +13,5 @@
     -
       local_action: "add_host hostname=${item.public_ip} groupname=launched"
       name: "Itemised host group addition"
-      with_items: "${ec2.instances}"
+      with_items: ec2.instances
   user: root
